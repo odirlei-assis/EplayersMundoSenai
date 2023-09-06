@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Titillium+Web:wght@700&display=swap');
+
+:root{
+    --banner1: url(../img/ImagemBanner.png);
+    --banner2: url(../img/banner_cs.png);
+    --banner3: url(../img/banner_lol.png);
+
+    --cor1: #1E1C21;
+    --cor2: #ffffff;
+    --cor3: #C31616;
+    --cor4: #010101;
+    --cor5: #01000f 0%;
+    --cor6: #b6b6b6 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container_grid{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1{
+    display: none;
+}
+
+header{
+    background-color: var(--cor1);
+    height: 80px;
+}
+
+.cabecalho_alinhamento{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.menu{
+    width: 660px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.menu a:hover{
+    scale: 1.1;
+}
+
+/*para trocar cor de arquivo svg tem que colocar o link(código) e atributo fill no css*/
+.cabecalho_alinhamento svg{
+    width: 30px;
+    fill: var(--cor2);
+}
+    
+.barras{
+    display: none;
+}
+
+.banner{
+    height: 600px;
+    background-size: cover;
+    background:
+        linear-gradient(90deg, #00000000, #00000090),
+        var(--banner2);
+}
+
+.posicao_texto{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.texto_banner{
+    color: white;
+    text-align: center;
+}
+
+.texto_banner span{
+    font-size: 80px;
+    font-family: 'Titillium Web', sans-serif; 
+}
+
+.texto_banner p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    margin-bottom: 80px;
+}
+
+.texto_banner a{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--cor3);
+    padding: 12px 32px;
+    border-radius: 10px;
+}
+
+.secao_jogos{
+    background-color: black;
+
+}
+
+.linha_jogos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px 0;
+
+}
+
+.ofertas{
+    background-color: var(--cor1);
+    padding: 30px 0;
+}
+
+h2{
+    color: white;
+    font-size: 20px;
+}
+
+.secao-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.card{
+    width: 215px;
+    margin: 20px;
+    box-shadow: 0 0 30px rgb(5, 0, 0);
+    background: linear-gradient(360deg, var(--cor5), var(--cor6));
+    color: var(--cor2);
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+.card img{
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3{
+    font-size: 20px;
+}
+
+
+.card a{
+    text-decoration: none;
+    background-color: var(--cor3);
+    padding: 7px 38px;
+    border-radius: 10px;
+    color: var(--cor2);
+    text-transform: uppercase;
+    margin: 15px;
+    text-align: center;
+}
+
+.card *:not(:first-child){
+    margin: 5px 10px;
+}
+
+footer{
+    background-color: var(--cor4);
+    padding: 50px 0;
+}
+
+.rodape{
+    display: flex;
+    justify-content: space-around;
+}
+
+.links_footer{
+    display: flex;
+}
+
+/* .rodape *{
+    /*flex: 1;
+}*/ 
+
+.links_footer a{
+    color: var(--cor2);
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Titillium Web', sans-serif; 
+
+}
+
+footer .box_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_logo .logo{
+    height: 30px;
+}
+
+.info_contato{
+    color: var(--cor2);
+}
+
+
+@media screen and (max-width: 1200px) {
+    .menu{
+    width: 550px;
+   }
+    .menu a{
+        font-size: 16px;
+   } 
+   .logo{
+    width: 250px;
+    margin-right: 20px;
+   }
+}
+
+@media screen and (max-width: 768px){
+    .cabecalho_alinhamento{
+        position: relative;
+    }
+    .menu{
+        display:none;
+        flex-direction: column;
+        width: 150px;
+        position: absolute;
+        right: 0px;
+        top: 70px;
+        background-color: #000000dd;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px black;
+   } 
+
+   .menu a{
+
+    margin: 5px;
+    text-align: end;
+   }
+   .barras{
+    display: flex;
+   }
+}
